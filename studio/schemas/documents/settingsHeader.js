@@ -2,7 +2,6 @@ export default {
   name: 'settingsHeader',
   type: 'document',
   title: 'Settings - Header',
-  __experimental_actions: [/* 'create', 'delete', */ 'update', 'publish'],
   fieldsets: [
     {
       title: 'Button',

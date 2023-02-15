@@ -2,7 +2,6 @@ export default {
   name: 'settingsApi',
   type: 'document',
   title: 'Settings - API',
-  __experimental_actions: [/* 'create', 'delete', */ 'update', 'publish'],
   fields: [
     {
       title: 'Google Tag Manager ID',

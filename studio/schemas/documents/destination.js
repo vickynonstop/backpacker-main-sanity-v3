@@ -31,9 +31,7 @@ export default {
       name: 'name',
     },
     prepare: ({ name }) => ({
-     
       title: name,
-
     }),
   },
 }

@@ -2,7 +2,6 @@ export default {
   name: 'settingsGeneral',
   type: 'document',
   title: 'Settings - General',
-  __experimental_actions: [/* 'create', 'delete', */ 'update', 'publish'],
   fields: [
     {
       title: 'Site title',

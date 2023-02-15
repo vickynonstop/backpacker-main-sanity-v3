@@ -10,24 +10,23 @@ export default {
       name: 'images',
       type: 'array',
       of: [
-       
         {
           title: 'Image',
-          name: 'image',
+          name: 'figureImage',
           type: 'figure',
         },
       ],
-      validation: (Rule) => Rule.required().min(1),
+      validation: Rule => Rule.required().min(1),
     },
   ],
   preview: {
     select: {
       images: 'images',
     },
-    prepare({ images }) {
+    prepare(props) {
       return {
         title: 'Image gallery',
-        subtitle: `Number of images: ${images.length ?? 0}`,
+        subtitle: `Number of images: ${props.images.length ?? 0}`,
         media: FiImage,
       }
     },

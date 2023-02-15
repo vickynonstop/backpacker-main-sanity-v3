@@ -32,8 +32,8 @@ import travelCalendar from './sections/travelCalendar'
 import travelProgram from './sections/travelProgram'
 
 export default [
-  
     // Documents
+    settingsGeneral,
     settingsApi,
     settingsHeader,
     settingsFooter,

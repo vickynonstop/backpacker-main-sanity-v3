@@ -2,7 +2,6 @@ export default {
   name: 'settingsFooter',
   type: 'document',
   title: 'Settings - Footer',
-  __experimental_actions: [/* 'create', 'delete', */ 'update', 'publish'],
   fields: [
     {
       title: 'Copyright',

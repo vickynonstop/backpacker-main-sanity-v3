@@ -1,6 +1,10 @@
 import React from 'react'
 
-const HTMLpreview = ({ value }) => <div dangerouslySetInnerHTML={{ __html: value.html }} />
+
+
+const HTMLpreview = ({ value }) => (
+  <div dangerouslySetInnerHTML={{ __html: value.html }} />
+)
 
 export default {
   title: 'Embed HTML',

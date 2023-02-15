@@ -1,9 +1,7 @@
 import React, { useEffect, useState, forwardRef } from 'react'
 import { Card, Select, Stack } from '@sanity/ui'
-// import { FormField } from '@sanity/base/components'
-import PatchEvent, { set, unset } from '@sanity/form-builder/PatchEvent'
-import { useId } from '@reach/auto-id'
-// import { withDocument } from '@sanity/form-builder'
+import { set, unset } from 'sanity';
+// import { withDocument } from 'part:@sanity/form-builder'
 // import sanityClient from 'part:@sanity/base/client'
 
 // const client = sanityClient.withConfig({ apiVersion: '2021-10-21' })
@@ -13,7 +11,6 @@ const GetQondorTravels = forwardRef((props, ref) => {
   const [allTravelData, setAllTravelData] = useState([])
 
   const isDev = process.env.NODE_ENV === 'development'
-  const inputId = useId()
 
   const {
     type, // Schema information
@@ -31,7 +28,7 @@ const GetQondorTravels = forwardRef((props, ref) => {
   const handleChange = React.useCallback(
     (event) => {
       const inputValue = event.currentTarget.value
-      onChange(PatchEvent.from(inputValue ? set(inputValue) : unset()))
+      onChange(inputValue ? set(inputValue) : unset())
 
       const travelData = allTravelData.find((t) => t.id == inputValue)
       if (travelData) {
@@ -90,13 +87,6 @@ const GetQondorTravels = forwardRef((props, ref) => {
   }, [])
 
   return (
-    // <FormField
-    //   description={type.description}
-    //   title={type.title}
-    //   __unstable_markers={markers}
-    //   __unstable_presence={presence}
-    //   compareValue={compareValue}
-    //   inputId={inputId}>
     <Card padding={0}>
       <Stack>
         <Select
@@ -118,7 +108,6 @@ const GetQondorTravels = forwardRef((props, ref) => {
         </Select>
       </Stack>
     </Card>
-    // </FormField>
   )
 })
 

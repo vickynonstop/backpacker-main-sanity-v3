@@ -22,7 +22,7 @@ function Footer({ config, footer }) {
           })}
         </div>
         <div className={style.copyright}>
-           <BlockContent value={footer.copyright} />
+          <BlockContent value={footer.copyright} />
         </div>
       </div>
     </footer>
