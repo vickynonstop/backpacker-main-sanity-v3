@@ -1,0 +1,137 @@
+.header_container {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  padding: 16px;
+
+  * {
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    padding: 16px 32px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 100%;
+  z-index: 900;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    order: 2;
+    justify-content: flex-end;
+
+    button p {
+      display: none;
+    }
+  }
+}
+
+.brand {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    order: 1;
+    max-width: 170px;
+  }
+}
+
+.button {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navigation {
+  position: fixed;
+  z-index: 800;
+  top: 0;
+  bottom: 0;
+  left: -999px;
+  transition: left 0.3s linear;
+
+  height: 100%;
+  width: auto;
+  min-width: 400px;
+  padding: 128px 40px;
+  background-color: var(--color-orange);
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-family: var(--font-akira);
+        font-size: var(--font-lg);
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          border-bottom: 3px solid var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.navigation_open {
+  left: 0 !important;
+}
+
+.navigation_overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}

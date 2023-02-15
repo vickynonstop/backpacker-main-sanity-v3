@@ -1,4 +1,4 @@
-# Backpacker.no
+# Backpacker.no - Studio
 
 > Versjon 1.0.0 <br />
 > Utviklet av Daniel Martinsen, for Marketin AS <br/>

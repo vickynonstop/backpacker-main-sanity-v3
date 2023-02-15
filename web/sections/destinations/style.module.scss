@@ -1,0 +1,21 @@
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.destination {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--color-beige);
+
+  .title {
+    padding: 16px;
+    margin: 0;
+    font-size: var(--font-md);
+  }
+}

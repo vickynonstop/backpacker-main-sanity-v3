@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''), url('/fonts/inter/inter-regular.woff2') format('woff2'),
+    url('/fonts/inter/inter-regular.woff') format('woff'),
+    url('/fonts/inter/inter-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''), url('/fonts/inter/inter-500.woff2') format('woff2'),
+    url('/fonts/inter/inter-500.woff') format('woff'),
+    url('/fonts/inter/inter-500.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(''), url('/fonts/inter/inter-600.woff2') format('woff2'),
+    url('/fonts/inter/inter-600.woff') format('woff'),
+    url('/fonts/inter/inter-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''), url('/fonts/inter/inter-700.woff2') format('woff2'),
+    url('/fonts/inter/inter-700.woff') format('woff'),
+    url('/fonts/inter/inter-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Akira Expanded';
+  font-style: normal;
+  font-display: swap;
+  src: local(''), url('/fonts/akira/akira.woff2') format('woff2'),
+    url('/fonts/akira/akira.woff') format('woff'),
+    url('/fonts/akira/akira.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--background-color);
+  color: var(--color-text);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--site-width) + 32px);
+  margin: var(--section-margin) auto;
+  padding: 0 16px;
+}
+
+a {
+  color: var(--color-links);
+  text-decoration: underline;
+}
+
+p {
+  font-size: var(--font-base);
+}
+
+h1 {
+  font-size: var(--font-xxl);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--font-xl);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--font-md);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--font-xs);
+  font-weight: 600;
+}
+
+img {
+  user-select: none;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+blockquote {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  padding-left: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -4px;
+    bottom: -4px;
+    width: 3px;
+    background: lightgray;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+}

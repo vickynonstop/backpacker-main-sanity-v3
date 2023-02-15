@@ -1,0 +1,50 @@
+.quote_container {
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.wrapper {
+  padding: 64px 16px;
+  background: var(--color-orange);
+
+  @media (min-width: 768px) {
+    border-radius: var(--border-radius);
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: var(--width-small);
+  margin: 0 auto;
+
+  &::before {
+    content: '“';
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 48px;
+    color: var(--color-white);
+    opacity: 0.3;
+    font-size: 200px;
+    font-family: var(--font-akira);
+
+    @media (max-width: 768px) {
+      font-size: 100px;
+      left: 16px;
+    }
+  }
+}
+
+.text {
+  color: var(--color-white);
+  font-size: var(--font-lg);
+  font-family: var(--font-akira);
+
+  @media (max-width: 768px) {
+    font-size: var(--font-md);
+    margin-top: 48px;
+  }
+}

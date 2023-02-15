@@ -1,0 +1,30 @@
+.traveltopinfo_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  p,
+  h2 {
+    margin: 8px 0;
+    font-weight: 700;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px 48px;
+
+  p {
+    small {
+      font-size: var(--font-xs);
+    }
+
+    margin: 0;
+    font-size: var(--font-lg);
+    font-weight: 700;
+  }
+}

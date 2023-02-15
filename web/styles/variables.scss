@@ -1,0 +1,60 @@
+:root {
+  /* Configuration */
+  --site-width: 1140px;
+  --border-radius: 2px;
+  --section-margin: 72px;
+
+  /* Base colors */
+  --background-color: #ffffff;
+  --color-text: #292929;
+  --color-links: #ff622e;
+
+  /* Theme colors */
+  --color-black: #292929;
+  --color-white: #ffffff;
+  --color-beige: #f5f5f5;
+  --color-orange: #ff622e;
+  --color-blue: #3f547f;
+  --color-magenta: #b94b90;
+
+  /* Gradients */
+  --gradient-heading: linear-gradient(90deg, #ff622e, #b94b90);
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-akira: 'Akira Expanded', sans-serif;
+
+  /* Font sizes */
+  --font-xxl: 2.4rem; /* h1 */
+  --font-xl: 1.9rem; /* h2 */
+  --font-lg: 1.5rem; /* h3 */
+  --font-md: 1.2rem; /* h4 */
+  --font-sm: 1.1rem; /* h5 */
+  --font-xs: 1rem; /* h6 */
+  --font-base: 16px; /* base */
+
+  /* Widths */
+  --width-small: 720px;
+  --width-medium: 900px;
+  --width-large: 1140px;
+
+  /* Shadows */
+  --shadow-sm: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-xxl: 1.8rem; /* h1 */
+    --font-xl: 1.6rem; /* h2 */
+    --font-lg: 1.4rem; /* h3 */
+    --font-md: 1.2rem; /* h4 */
+    --font-sm: 1.1rem; /* h5 */
+    --font-xs: 1rem; /* h6 */
+    --font-base: 15px; /* base */
+  }
+}

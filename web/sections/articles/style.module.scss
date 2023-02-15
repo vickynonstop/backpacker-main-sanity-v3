@@ -1,0 +1,26 @@
+.articles {
+  padding-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+
+  overflow-x: scroll;
+  grid-auto-flow: column;
+  grid-auto-columns: 300px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.article {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--color-beige);
+
+  .title {
+    padding: 16px;
+    margin: 0;
+    font-size: var(--font-md);
+  }
+}

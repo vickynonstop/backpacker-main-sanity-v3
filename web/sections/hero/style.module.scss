@@ -1,0 +1,168 @@
+@mixin hero {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@mixin heading {
+  max-width: var(--width-small);
+  padding: 0 32px;
+
+  h1 {
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-akira);
+  }
+}
+
+.hero_frontpage {
+  padding: 0;
+
+  .wrapper {
+    @include hero;
+
+    height: 75vh;
+    max-height: 890px;
+    min-height: 500px;
+  }
+
+  .heading {
+    @include heading;
+    width: 100%;
+
+    h1 {
+      @media (min-width: 768px) {
+        font-size: calc(var(--font-xxl) * 1.3);
+      }
+    }
+  }
+}
+
+.hero_normal {
+  padding: 0;
+
+  .wrapper {
+    @include hero;
+
+    height: 60vh;
+    max-height: 720px;
+    min-height: 400px;
+  }
+
+  .heading {
+    @include heading;
+    width: 100%;
+    max-width: var(--width-medium);
+
+    h1 {
+      @media (min-width: 768px) {
+        font-size: calc(var(--font-xxl) * 1.3);
+      }
+    }
+  }
+}
+
+.hero_normal_background {
+  padding: 0;
+
+  .wrapper {
+    @include hero;
+
+    height: 60vh;
+    max-height: 720px;
+    min-height: 500px;
+    padding-bottom: 48px;
+    align-items: flex-end;
+  }
+
+  .content {
+    align-items: flex-start;
+  }
+
+  .heading {
+    @include heading;
+
+    background-color: var(--color-orange);
+    border-radius: var(--border-radius);
+
+    h1 {
+      text-align: left;
+      font-size: var(--font-xl);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      padding-bottom: 0;
+    }
+
+    .heading {
+      border-radius: 0;
+
+      h1 {
+        font-size: var(--font-lg);
+      }
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: var(--site-width);
+  margin: 0 auto;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuredTravels {
+  position: relative;
+  width: 100%;
+  max-width: var(--site-width);
+
+  margin: -150px auto 0 auto;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    padding: 16px;
+  }
+}
+
+.travel {
+  background: var(--color-white);
+
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    padding: 24px;
+    margin: 0;
+    font-size: var(--font-md);
+  }
+}

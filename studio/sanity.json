@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "project": {
+    "name": "Backpacker Norge"
+  },
+  "api": {
+    "projectId": "9an3r9gw",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "media-library",
+    "vercel-deploy",
+    "@sanity/production-preview",
+    "iframe-pane"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./lib/deskStructure.js"
+    },
+    {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./lib/initialPageValue.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./lib/resolveProductionUrl.js"
+    }
+  ]
+}

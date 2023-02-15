@@ -1,0 +1,57 @@
+.ctacard_container {
+  @media (max-width: 1140px) {
+    padding: 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  padding: 64px 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  margin-bottom: 48px;
+}
+
+.content {
+  width: 100%;
+  max-width: var(--width-small);
+  padding: 16px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-family: var(--font-akira);
+    color: var(--color-white);
+  }
+
+  ctas {
+    justify-content: center;
+  }
+}

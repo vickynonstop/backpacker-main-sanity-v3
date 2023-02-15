@@ -1,0 +1,26 @@
+.textblock_fancy {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 48px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    font-family: var(--font-akira);
+
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+.textblock_normal {
+  width: 100%;
+}
